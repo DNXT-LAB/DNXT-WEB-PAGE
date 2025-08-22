@@ -53,8 +53,8 @@ export default function Header() {
                 { href: '/#home', label: 'Home' },
                 { href: '/#about', label: 'About' },
                 { href: '/#how-it-works', label: 'Manufacturing Process' },
-                { href: '/#technology', label: 'Our Technology' },
                 { href: '/#dnxt-token', label: 'DNXT PLATFORM' },
+                { href: '/services', label: 'Services' },
                 { href: '/compete2030', label: 'COMPETE 2030' },
                 { href: '/contact', label: 'Contact' },
               ].map((link, index) => (
@@ -115,8 +115,8 @@ export default function Header() {
                 { href: '/#home', label: 'Home' },
                 { href: '/#about', label: 'About' },
                 { href: '/#how-it-works', label: 'Manufacturing Process' },
-                { href: '/#technology', label: 'Our Technology' },
                 { href: '/#dnxt-token', label: 'DNXT PLATFORM' },
+                { href: '/services', label: 'Services' },
                 { href: '/compete2030', label: 'COMPETE 2030' },
                 { href: '/contact', label: 'Contact' },
               ].map((link, index) => (

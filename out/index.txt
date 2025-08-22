@@ -1,15 +1,15 @@
-1:HL["/_next/static/css/77afe42df6516275.css",{"as":"style"}]
-0:["cIq8LXT7E7kGgBosNOdqI",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/77afe42df6516275.css","precedence":"next"}]],"$L3"]]]]
-4:I{"id":7767,"chunks":["272:static/chunks/webpack-11df0924cc7d420c.js","971:static/chunks/fd9d1056-f0d7a6ac6a3812d6.js","596:static/chunks/596-a0d968726bbeae66.js"],"name":"default","async":false}
-5:I{"id":7920,"chunks":["272:static/chunks/webpack-11df0924cc7d420c.js","971:static/chunks/fd9d1056-f0d7a6ac6a3812d6.js","596:static/chunks/596-a0d968726bbeae66.js"],"name":"default","async":false}
-7:I{"id":1654,"chunks":["165:static/chunks/165-78e9707b188ed987.js","417:static/chunks/417-a8b4c2d3aae35579.js","818:static/chunks/818-986207e5ecef9155.js","931:static/chunks/app/page-5a7b0a3b78ea7c6c.js"],"name":"","async":false}
-8:I{"id":8777,"chunks":["165:static/chunks/165-78e9707b188ed987.js","417:static/chunks/417-a8b4c2d3aae35579.js","818:static/chunks/818-986207e5ecef9155.js","931:static/chunks/app/page-5a7b0a3b78ea7c6c.js"],"name":"","async":false}
-9:I{"id":664,"chunks":["165:static/chunks/165-78e9707b188ed987.js","417:static/chunks/417-a8b4c2d3aae35579.js","818:static/chunks/818-986207e5ecef9155.js","931:static/chunks/app/page-5a7b0a3b78ea7c6c.js"],"name":"","async":false}
-a:I{"id":4049,"chunks":["165:static/chunks/165-78e9707b188ed987.js","417:static/chunks/417-a8b4c2d3aae35579.js","818:static/chunks/818-986207e5ecef9155.js","931:static/chunks/app/page-5a7b0a3b78ea7c6c.js"],"name":"","async":false}
-b:I{"id":1659,"chunks":["165:static/chunks/165-78e9707b188ed987.js","417:static/chunks/417-a8b4c2d3aae35579.js","818:static/chunks/818-986207e5ecef9155.js","931:static/chunks/app/page-5a7b0a3b78ea7c6c.js"],"name":"","async":false}
-c:I{"id":685,"chunks":["165:static/chunks/165-78e9707b188ed987.js","417:static/chunks/417-a8b4c2d3aae35579.js","818:static/chunks/818-986207e5ecef9155.js","931:static/chunks/app/page-5a7b0a3b78ea7c6c.js"],"name":"","async":false}
-d:I{"id":8099,"chunks":["165:static/chunks/165-78e9707b188ed987.js","417:static/chunks/417-a8b4c2d3aae35579.js","818:static/chunks/818-986207e5ecef9155.js","931:static/chunks/app/page-5a7b0a3b78ea7c6c.js"],"name":"","async":false}
-e:I{"id":3015,"chunks":["185:static/chunks/app/layout-1045a0e92b2e1be0.js"],"name":"","async":false}
+1:HL["/_next/static/css/43c346b3064113f5.css",{"as":"style"}]
+0:["6QDCXGn41K3DeWmmJ9xA_",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/43c346b3064113f5.css","precedence":"next"}]],"$L3"]]]]
+4:I{"id":7767,"chunks":["272:static/chunks/webpack-1246f67ab9762aae.js","971:static/chunks/fd9d1056-f0d7a6ac6a3812d6.js","596:static/chunks/596-a0d968726bbeae66.js"],"name":"default","async":false}
+5:I{"id":7920,"chunks":["272:static/chunks/webpack-1246f67ab9762aae.js","971:static/chunks/fd9d1056-f0d7a6ac6a3812d6.js","596:static/chunks/596-a0d968726bbeae66.js"],"name":"default","async":false}
+7:I{"id":1654,"chunks":["165:static/chunks/165-78e9707b188ed987.js","417:static/chunks/417-a8b4c2d3aae35579.js","818:static/chunks/818-c736eeef7169a53c.js","931:static/chunks/app/page-f6e8f83b9a5e9e2f.js"],"name":"","async":false}
+8:I{"id":8777,"chunks":["165:static/chunks/165-78e9707b188ed987.js","417:static/chunks/417-a8b4c2d3aae35579.js","818:static/chunks/818-c736eeef7169a53c.js","931:static/chunks/app/page-f6e8f83b9a5e9e2f.js"],"name":"","async":false}
+9:I{"id":664,"chunks":["165:static/chunks/165-78e9707b188ed987.js","417:static/chunks/417-a8b4c2d3aae35579.js","818:static/chunks/818-c736eeef7169a53c.js","931:static/chunks/app/page-f6e8f83b9a5e9e2f.js"],"name":"","async":false}
+a:I{"id":4049,"chunks":["165:static/chunks/165-78e9707b188ed987.js","417:static/chunks/417-a8b4c2d3aae35579.js","818:static/chunks/818-c736eeef7169a53c.js","931:static/chunks/app/page-f6e8f83b9a5e9e2f.js"],"name":"","async":false}
+b:I{"id":1659,"chunks":["165:static/chunks/165-78e9707b188ed987.js","417:static/chunks/417-a8b4c2d3aae35579.js","818:static/chunks/818-c736eeef7169a53c.js","931:static/chunks/app/page-f6e8f83b9a5e9e2f.js"],"name":"","async":false}
+c:I{"id":685,"chunks":["165:static/chunks/165-78e9707b188ed987.js","417:static/chunks/417-a8b4c2d3aae35579.js","818:static/chunks/818-c736eeef7169a53c.js","931:static/chunks/app/page-f6e8f83b9a5e9e2f.js"],"name":"","async":false}
+d:I{"id":8099,"chunks":["165:static/chunks/165-78e9707b188ed987.js","417:static/chunks/417-a8b4c2d3aae35579.js","818:static/chunks/818-c736eeef7169a53c.js","931:static/chunks/app/page-f6e8f83b9a5e9e2f.js"],"name":"","async":false}
+e:I{"id":3015,"chunks":["185:static/chunks/app/layout-9f752b56d3b76cf9.js"],"name":"","async":false}
 3:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"DNXT | Tokenized Diamond Investment Platform"}],["$","meta","2",{"name":"description","content":"DNXT is a premier platform for tokenized diamond investment, bringing together blockchain technology and traditional diamond assets."}],["$","meta","3",{"name":"keywords","content":"diamond investment, tokenized assets, blockchain, NFT, diamond trading, CVC"}],["$","meta","4",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 f:T60f,
             document.addEventListener('DOMContentLoaded', function() {

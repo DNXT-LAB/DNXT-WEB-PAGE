@@ -44,7 +44,7 @@ const ProcessStep = ({ step, isEven }: { step: any, isEven: boolean }) => {
   };
 
   return (
-    <div ref={ref} className="relative min-h-[80vh] flex items-center overflow-hidden">
+    <div ref={ref} className="relative min-h-[80vh] lg:min-h-0 flex items-center overflow-hidden">
       {/* Content Container */}
       <div className="container-custom relative z-10">
         <motion.div
@@ -189,7 +189,7 @@ export default function HowItWorks() {
   return (
     <section id="how-it-works" className="relative bg-dark-dark">
       {/* Section Header */}
-      <div className="container-custom py-20">
+      <div className="container-custom py-20 lg:py-0">
         <motion.div
           ref={ref}
           variants={headerVariants}
