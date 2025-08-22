@@ -3,10 +3,12 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { useLanguage } from '@/context/LanguageProvider';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const { lang, setLang, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,6 +23,22 @@ export default function Header() {
       document.removeEventListener('scroll', handleScroll);
     };
   }, [scrolled]);
+
+  const navLinks = [
+    { href: '/#home', label: t('nav.home') },
+    { href: '/#about', label: t('nav.about') },
+    { href: '/#how-it-works', label: t('nav.process') },
+    { href: '/#dnxt-token', label: t('nav.platform') },
+    { href: '/services', label: t('nav.services') },
+    { href: '/compete2030', label: t('nav.compete') },
+    { href: '/contact', label: t('nav.contact') },
+  ];
+
+  const languages: { code: 'pt' | 'en' | 'es'; label: string }[] = [
+    { code: 'pt', label: 'PT' },
+    { code: 'en', label: 'EN' },
+    { code: 'es', label: 'ES' },
+  ];
 
   return (
     <header 
@@ -48,16 +66,8 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:block">
-            <ul className="flex flex-row gap-8">
-              {[
-                { href: '/#home', label: 'Home' },
-                { href: '/#about', label: 'About' },
-                { href: '/#how-it-works', label: 'Manufacturing Process' },
-                { href: '/#dnxt-token', label: 'DNXT PLATFORM' },
-                { href: '/services', label: 'Services' },
-                { href: '/compete2030', label: 'COMPETE 2030' },
-                { href: '/contact', label: 'Contact' },
-              ].map((link, index) => (
+            <ul className="flex flex-row gap-8 items-center">
+              {navLinks.map((link, index) => (
                 <li key={index}>
                   <Link 
                     href={link.href} 
@@ -68,6 +78,20 @@ export default function Header() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <div className="relative">
+                  <select
+                    aria-label="Select language"
+                    className="bg-transparent text-white text-sm uppercase font-medium tracking-wide py-2 border border-white/10 rounded-md px-3 hover:border-gold/40 focus:outline-none"
+                    value={lang}
+                    onChange={(e) => setLang(e.target.value as any)}
+                  >
+                    {languages.map((l) => (
+                      <option key={l.code} value={l.code} className="bg-dark-dark text-white">{l.label}</option>
+                    ))}
+                  </select>
+                </div>
+              </li>
             </ul>
           </nav>
 
@@ -111,15 +135,7 @@ export default function Header() {
 
             {/* Mobile nav links */}
             <ul className="flex flex-col gap-0 mt-8">
-              {[
-                { href: '/#home', label: 'Home' },
-                { href: '/#about', label: 'About' },
-                { href: '/#how-it-works', label: 'Manufacturing Process' },
-                { href: '/#dnxt-token', label: 'DNXT PLATFORM' },
-                { href: '/services', label: 'Services' },
-                { href: '/compete2030', label: 'COMPETE 2030' },
-                { href: '/contact', label: 'Contact' },
-              ].map((link, index) => (
+              {navLinks.map((link, index) => (
                 <li key={index}>
                   <Link 
                     href={link.href} 
@@ -130,6 +146,18 @@ export default function Header() {
                   </Link>
                 </li>
               ))}
+              <li className="px-6 py-4">
+                <select
+                  aria-label="Select language"
+                  className="w-full bg-transparent text-white text-sm uppercase font-medium tracking-wide py-2 border border-white/10 rounded-md px-3 hover:border-gold/40 focus:outline-none"
+                  value={lang}
+                  onChange={(e) => setLang(e.target.value as any)}
+                >
+                  {languages.map((l) => (
+                    <option key={l.code} value={l.code} className="bg-dark-dark text-white">{l.label}</option>
+                  ))}
+                </select>
+              </li>
             </ul>
           </nav>
 

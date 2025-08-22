@@ -2,8 +2,10 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { useLanguage } from '@/context/LanguageProvider';
 
 export default function Hero() {
+  const { t } = useLanguage();
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-dark-dark overflow-hidden">
       {/* Video Background with darker overlay for better text contrast */}
@@ -31,13 +33,13 @@ export default function Hero() {
             className="mb-12"
           >
             <h1 className="text-[clamp(2.5rem,7vw,5.5rem)] font-bold leading-[1.1] tracking-tight mb-8">
-              Shaping the <br className="hidden lg:block" />
-              <span className="text-gold">Future</span> of <br className="hidden lg:block" />
-              Diamonds
+              {t('hero.title.part1')} <br className="hidden lg:block" />
+              <span className="text-gold">{t('hero.title.highlight')}</span> {t('hero.title.part2')} <br className="hidden lg:block" />
+              {t('hero.title.part3')}
             </h1>
             
             <p className="text-[clamp(1.125rem,1.5vw,1.25rem)] text-gray-300 max-w-2xl mx-auto lg:mx-0 mb-12">
-            DNXT is revolutionizing the diamond industry through fully automated polishing, RWA tokenization, and blockchain integration.
+              {t('hero.description')}
             </p>
 
             {/* CTA buttons with updated styling */}
@@ -46,13 +48,13 @@ export default function Hero() {
                 href="#technology" 
                 className="px-8 py-4 bg-gold hover:bg-gold/90 text-dark-dark font-medium rounded-lg transition-all duration-300 text-lg w-full sm:w-auto text-center"
               >
-                Our Technology
+                {t('nav.ourTech')}
               </Link>
               <Link 
                 href="/contact" 
                 className="px-8 py-4 bg-transparent hover:bg-white/5 border border-gold/30 hover:border-gold text-white font-medium rounded-lg transition-all duration-300 text-lg w-full sm:w-auto text-center"
               >
-                Contact Us
+                {t('nav.contactUs')}
               </Link>
             </div>
           </motion.div>

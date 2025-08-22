@@ -2,32 +2,34 @@
 
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import { useLanguage } from '@/context/LanguageProvider';
 
 export default function CvcTechnology() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
+  const { t } = useLanguage();
 
   const technologies = [
     {
       number: "01",
-      title: "Precision Grading Lab",
-      description: "Our advanced laboratory leverages AI-driven tools and expert gemologists to deliver unmatched accuracy in diamond grading, ensuring trust and transparency for investors and collectors."
+      title: t('tech.01.title'),
+      description: t('tech.01.desc')
     },
     {
       number: "02",
-      title: "CVC Protocol",
-      subtitle: "(Continuous Verifiable Connectivity)",
-      description: "This protocol ensures each diamond's identity is permanently verifiable on-chain, enabling tamper-proof traceability from the mine to the metaverse."
+      title: t('tech.02.title'),
+      subtitle: t('tech.02.subtitle'),
+      description: t('tech.02.desc')
     },
     {
       number: "03",
-      title: "Digital Twin Engine",
-      description: "Each diamond is paired with a unique, metadata-rich digital twin, stored on blockchain to preserve its history, ownership, and certification across digital ecosystems."
+      title: t('tech.03.title'),
+      description: t('tech.03.desc')
     },
     {
       number: "04",
-      title: "VaultLink Storage",
-      description: "A hybrid custody system that combines biometric-secured physical vaults with smart contract-based access for 24/7 visibility and maximum asset protection."
+      title: t('tech.04.title'),
+      description: t('tech.04.desc')
     }
   ];
 
@@ -61,14 +63,14 @@ export default function CvcTechnology() {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.5 }}
           >
-            Our <span className="text-gold">Technology</span>
+            {t('tech.title').split(' ')[0]} <span className="text-gold">{t('tech.title').split(' ')[1] ?? ''}</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            Cutting-edge solutions designed to revolutionize the diamond industry
+            {t('tech.subtitle')}
           </motion.p>
         </div>
 

@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter, Playfair_Display } from 'next/font/google'
 import Script from 'next/script'
+import { LanguageProvider } from '@/context/LanguageProvider'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -29,7 +30,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <body className="min-h-screen antialiased">
-        {children}
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
         
         <Script id="animation-observer" strategy="afterInteractive">
           {`
@@ -62,7 +65,7 @@ export default function RootLayout({
                   
                   if (scrollPosition > elementPosition - window.innerHeight && 
                       scrollPosition < elementPosition + element.offsetHeight) {
-                    element.style.transform = \`translateY(\${distance}px)\`;
+                    element.style.transform = 'translateY(' + distance + 'px)';
                   }
                 });
               });
@@ -72,4 +75,4 @@ export default function RootLayout({
       </body>
     </html>
   )
-} 
+}

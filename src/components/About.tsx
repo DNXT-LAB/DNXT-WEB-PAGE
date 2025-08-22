@@ -2,10 +2,12 @@
 
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import { useLanguage } from '@/context/LanguageProvider';
 
 export default function About() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
+  const { t } = useLanguage();
 
   return (
     <section id="about" className="py-24 bg-dark-dark">
@@ -23,10 +25,10 @@ export default function About() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.5 }}
             >
-              About <span className="text-gold">DNXT</span>
+              {t('about.title')} <span className="text-gold">DNXT</span>
             </motion.h2>
             <p className="text-diamond-dark max-w-3xl mx-auto text-lg">
-              Merging cutting-edge manufacturing technology with blockchain integration for the future of diamonds
+              {t('about.subtitle')}
             </p>
           </motion.div>
 
@@ -57,10 +59,10 @@ export default function About() {
               <div className="relative z-10">
                 <div className="flex items-center mb-6">
                   <div className="w-8 h-[2px] bg-gradient-to-r from-gold to-transparent mr-4"></div>
-                  <h3 className="text-2xl font-bold text-gold">Mission</h3>
+                  <h3 className="text-2xl font-bold text-gold">{t('about.mission')}</h3>
                 </div>
                 <p className="text-gray-300 leading-relaxed">
-                  To revolutionize the diamond industry by building a secure, transparent, and decentralized digital platform that enables the tokenization of real-world diamonds through blockchain, CVC, and ZeroID technologies. Our mission is to democratize access to diamond investment by ensuring traceability, authenticity, and ethical sourcing across the entire value chain.
+                  {t('about.mission.text')}
                 </p>
               </div>
             </motion.div>
@@ -91,10 +93,10 @@ export default function About() {
               <div className="relative z-10">
                 <div className="flex items-center mb-6">
                   <div className="w-8 h-[2px] bg-gradient-to-r from-gold to-transparent mr-4"></div>
-                  <h3 className="text-2xl font-bold text-gold">Vision</h3>
+                  <h3 className="text-2xl font-bold text-gold">{t('about.vision')}</h3>
                 </div>
                 <p className="text-gray-300 leading-relaxed">
-                  To become the global leader in real-world asset (RWA) tokenization, setting a new technological standard in the diamond sector. We aim to reshape how diamonds are valued, traded, and owned by delivering a future-proof, inclusive, and sustainable marketplace that bridges the physical and digital worlds.
+                  {t('about.vision.text')}
                 </p>
               </div>
             </motion.div>

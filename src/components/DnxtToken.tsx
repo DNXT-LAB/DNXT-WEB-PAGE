@@ -2,10 +2,12 @@
 
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import { useLanguage } from '@/context/LanguageProvider';
 
 export default function DnxtToken() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
+  const { t } = useLanguage();
 
   return (
     <section id="dnxt-token" className="py-24 bg-dark-dark">
@@ -16,14 +18,14 @@ export default function DnxtToken() {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.5 }}
           >
-            DNXT <span className="text-gold">PLATFORM</span>
+            {t('platform.title')}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            A comprehensive digital ecosystem for diamond investment, trading, and asset management
+            {t('platform.subtitle')}
           </motion.p>
         </div>
 
@@ -35,9 +37,9 @@ export default function DnxtToken() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="token-info"
           >
-            <h3 className="text-3xl lg:text-4xl font-bold text-white mb-6 hover:text-gold/90 transition-colors duration-300">Platform Overview</h3>
+            <h3 className="text-3xl lg:text-4xl font-bold text-white mb-6 hover:text-gold/90 transition-colors duration-300">{t('platform.overview')}</h3>
             <p className="text-diamond-dark mb-4">
-              The DNXT Platform merges cutting-edge blockchain infrastructure with the intrinsic value of tokenized diamonds to deliver a next-generation Real-World Asset (RWA) marketplace. Designed for security, transparency, and scalability, the platform facilitates real-time trading, on-chain asset management, and direct ownership of diamond-backed digital tokens for both retail and institutional participants.
+              {t('platform.overview.text')}
             </p>
             <ul className="space-y-4 mt-8">
               <li className="flex items-start">
@@ -48,8 +50,8 @@ export default function DnxtToken() {
                   </svg>
                 </div>
                 <div>
-                  <span className="text-white font-medium">Secure Trading Environment</span>
-                  <p className="text-diamond-dark">Institutional-grade security protocols, on-chain auditability, and real-time verification ensure trustless, transparent, and compliant transactions.</p>
+                  <span className="text-white font-medium">{t('platform.secureTrading')}</span>
+                  <p className="text-diamond-dark">{t('platform.secureTrading.desc')}</p>
                 </div>
               </li>
               <li className="flex items-start">
@@ -60,8 +62,8 @@ export default function DnxtToken() {
                   </svg>
                 </div>
                 <div>
-                  <span className="text-white font-medium">Market Intelligence</span>
-                  <p className="text-diamond-dark">AI-driven analytics and dynamic pricing models offer deep market insights and risk assessment tools, empowering data-informed investment strategies.</p>
+                  <span className="text-white font-medium">{t('platform.marketIntel')}</span>
+                  <p className="text-diamond-dark">{t('platform.marketIntel.desc')}</p>
                 </div>
               </li>
             </ul>
@@ -74,10 +76,10 @@ export default function DnxtToken() {
             transition={{ duration: 0.7, delay: 0.4 }}
             className="token-benefits"
           >
-            <h3 className="text-3xl lg:text-4xl font-bold text-white mb-6 hover:text-gold/90 transition-colors duration-300">Key Features</h3>
+            <h3 className="text-3xl lg:text-4xl font-bold text-white mb-6 hover:text-gold/90 transition-colors duration-300">{t('platform.keyFeatures')}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="p-6 bg-dark rounded-lg border border-gold/10 hover:border-gold/30 transition-all">
-                <h4 className="text-gold text-lg mb-3">For Investors</h4>
+                <h4 className="text-gold text-lg mb-3">{t('platform.forInvestors')}</h4>
                 <ul className="text-diamond-dark space-y-2">
                   <li>• Direct access to fully collateralized RWA tokens</li>
                   <li>• Fractional ownership of physical diamonds</li>
@@ -85,7 +87,7 @@ export default function DnxtToken() {
                 </ul>
               </div>
               <div className="p-6 bg-dark rounded-lg border border-gold/10 hover:border-gold/30 transition-all">
-                <h4 className="text-gold text-lg mb-3">For Traders</h4>
+                <h4 className="text-gold text-lg mb-3">{t('platform.forTraders')}</h4>
                 <ul className="text-diamond-dark space-y-2">
                   <li>• Advanced DeFi-style trading infrastructure</li>
                   <li>• On-chain order routing and settlement</li>
@@ -95,7 +97,7 @@ export default function DnxtToken() {
             </div>
 
             <div className="mt-8 p-6 bg-dark-darker rounded-lg border border-gold/20">
-              <h4 className="text-gold text-lg mb-3">Platform Benefits</h4>
+              <h4 className="text-gold text-lg mb-3">{t('platform.benefits')}</h4>
               <p className="text-diamond-dark">
                 The DNXT Platform redefines diamond investing by enabling the tokenization of authenticated physical assets with verifiable provenance. Through seamless integration with Web3 tools, secure custodial services, and an intuitive trading interface, DNXT empowers users to participate in the RWA economy — making hard assets like diamonds liquid, divisible, and globally accessible.
               </p>

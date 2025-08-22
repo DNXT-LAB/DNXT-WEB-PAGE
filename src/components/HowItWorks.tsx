@@ -2,6 +2,7 @@
 
 import { useRef } from 'react';
 import { motion, useInView, useScroll, useTransform } from 'framer-motion';
+import { useLanguage } from '@/context/LanguageProvider';
 
 const ProcessStep = ({ step, isEven }: { step: any, isEven: boolean }) => {
   const ref = useRef(null);
@@ -123,6 +124,7 @@ const ProcessStep = ({ step, isEven }: { step: any, isEven: boolean }) => {
 export default function HowItWorks() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
+  const { t } = useLanguage();
 
   const headerVariants = {
     hidden: { 
@@ -142,45 +144,45 @@ export default function HowItWorks() {
   const steps = [
     {
       number: 1,
-      title: "Scanning, Planning, and Mapping with AI Tech",
-      description: "High-resolution 3D scanning systems, powered by AI and computer vision, analyze the rough diamond to determine the optimal cut strategy. This maximizes yield, clarity, and value, minimizing human error and material loss.",
+      title: t('how.step1.title'),
+      description: t('how.step1.desc'),
       bulletPoints: [
-        "AI algorithms simulate thousands of cutting plans in milliseconds",
-        "Deep imaging identifies inclusions, strain lines, and growth patterns",
-        "Optimization engines prioritize value extraction (carat, cut, clarity)"
+        t('how.step1.b1'),
+        t('how.step1.b2'),
+        t('how.step1.b3'),
       ],
       icon: "/images/scan-diamond.svg"
     },
     {
       number: 2,
-      title: "Laser Sawing and Cutting",
-      description: "Industrial-grade lasers are used to make precise cuts based on the AI-generated mapping. This stage ensures structural integrity and maximizes potential for ideal light performance in the final product.",
+      title: t('how.step2.title'),
+      description: t('how.step2.desc'),
       bulletPoints: [
-        "Laser cutting minimizes mechanical stress and breakage",
-        "Seamless integration with AI planning for automated execution",
-        "Real-time control systems adapt to micro-variations in the material"
+        t('how.step2.b1'),
+        t('how.step2.b2'),
+        t('how.step2.b3'),
       ],
       icon: "/images/cut-diamond.svg"
     },
     {
       number: 3,
-      title: "Automatic Polishing with AI-Driven Sensors",
-      description: "A robotic polishing arm, guided by real-time sensor feedback and intelligent algorithms, shapes facets with micrometer precision. Machine learning models maintain uniform polishing quality at scale.",
+      title: t('how.step3.title'),
+      description: t('how.step3.desc'),
       bulletPoints: [
-        "Robotic arms ensure uniform symmetry and angle accuracy",
-        "Feedback loops using vibration and torque",
-        "Consistency across batches regardless of operator variability"
+        t('how.step3.b1'),
+        t('how.step3.b2'),
+        t('how.step3.b3'),
       ],
       icon: "/images/polish-diamond.svg"
     },
     {
       number: 4,
-      title: "Diamond Tokenization",
-      description: "Once polished and certified, the diamond is digitized via tokenization. Each stone is linked to a cryptographic token (NFT) with traceable metadata, enabling secure, verifiable ownership and trading.",
+      title: t('how.step4.title'),
+      description: t('how.step4.desc'),
       bulletPoints: [
-        "Blockchain-backed NFTs store cut, carat, clarity, and provenance data",
-        "Integration with IoT for Continuous Verifiable Connectivity (CVC)",
-        "Enables liquidity, fractional ownership, and global market access"
+        t('how.step4.b1'),
+        t('how.step4.b2'),
+        t('how.step4.b3'),
       ],
       icon: "/images/redeem-diamond.svg"
     }
@@ -201,13 +203,13 @@ export default function HowItWorks() {
             variants={headerVariants}
             className="text-4xl md:text-5xl font-bold mb-4 hover:scale-[1.02] transition-transform duration-300"
           >
-            Manufacturing <span className="text-gold">Process</span>
+            {t('how.title')}
           </motion.h2>
           <motion.p 
             variants={headerVariants}
             className="text-diamond-dark max-w-3xl mx-auto text-lg"
           >
-            DNXT integrates precision engineering with IA to deliver diamonds of exceptional quality and verifiable authenticity.
+            {t('how.subtitle')}
           </motion.p>
         </motion.div>
       </div>

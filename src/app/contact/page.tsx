@@ -3,8 +3,10 @@
 import { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { useLanguage } from '@/context/LanguageProvider';
 
 export default function Contact() {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -34,17 +36,17 @@ export default function Contact() {
       <section className="pt-32 pb-16 px-4">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-poppins font-bold text-center mb-4">
-              Contact Us
+            <h1 className="text-4xl md:text-5xl text-gold font-poppins font-bold text-center mb-4">
+              {t('contact.title')}
             </h1>
-            <p className="text-gold/80 text-center font-poppins mb-12">
-              Have questions about DNXT? We'd love to hear from you.
+            <p className="text-white text-center font-poppins mb-12">
+              {t('contact.subtitle')}
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2">
-                  Name
+                  {t('contact.form.name')}
                 </label>
                 <input
                   type="text"
@@ -54,13 +56,13 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-[#1A1A1A] border border-gold/20 rounded-lg focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold/50 text-gray-100 placeholder:text-gray-400"
-                  placeholder="Your name"
+                  placeholder={t('contact.form.name.placeholder')}
                 />
               </div>
 
               <div>
                 <label htmlFor="email" className="block text-sm font-medium mb-2">
-                  Email
+                  {t('contact.form.email')}
                 </label>
                 <input
                   type="email"
@@ -70,13 +72,13 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-[#1A1A1A] border border-gold/20 rounded-lg focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold/50 text-gray-100 placeholder:text-gray-400"
-                  placeholder="your@email.com"
+                  placeholder={t('contact.form.email.placeholder')}
                 />
               </div>
 
               <div>
                 <label htmlFor="subject" className="block text-sm font-medium mb-2">
-                  Subject
+                  {t('contact.form.subject')}
                 </label>
                 <input
                   type="text"
@@ -86,13 +88,13 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-[#1A1A1A] border border-gold/20 rounded-lg focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold/50 text-gray-100 placeholder:text-gray-400"
-                  placeholder="What's this about?"
+                  placeholder={t('contact.form.subject.placeholder')}
                 />
               </div>
 
               <div>
                 <label htmlFor="message" className="block text-sm font-medium mb-2">
-                  Message
+                  {t('contact.form.message')}
                 </label>
                 <textarea
                   id="message"
@@ -102,7 +104,7 @@ export default function Contact() {
                   required
                   rows={6}
                   className="w-full px-4 py-3 bg-[#1A1A1A] border border-gold/20 rounded-lg focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold/50 text-gray-100 placeholder:text-gray-400 resize-none"
-                  placeholder="Your message..."
+                  placeholder={t('contact.form.message.placeholder')}
                 />
               </div>
 
@@ -110,7 +112,7 @@ export default function Contact() {
                 type="submit"
                 className="w-full bg-gold hover:bg-gold/90 text-dark-dark font-medium py-3 px-6 rounded-lg transition-colors duration-300"
               >
-                Send Message
+                {t('contact.form.send')}
               </button>
             </form>
           </div>
