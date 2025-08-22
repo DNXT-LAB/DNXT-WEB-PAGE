@@ -1,3 +1,4 @@
+import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 
 export default function Services() {
@@ -12,6 +13,7 @@ export default function Services() {
           </p>
         </div>
       </section>
+      <Footer />
     </main>
   );
 } 

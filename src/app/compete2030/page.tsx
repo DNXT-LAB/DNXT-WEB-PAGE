@@ -37,6 +37,17 @@ export default function Compete2030() {
             <p><strong>Entidade beneficiária:</strong> Diamond NXT Trading, Lda.</p>
             
             <p><strong>Código da operação:</strong> COMPETE2030-FEDER-01452600</p>
+
+            <div>
+                <a
+                href="/Ficha_de_OperacaoA4_COMPETE-2030.pdf"
+                download
+                className="text-blue-500 underline"
+                aria-label="Descargar PDF Dnxt compete 2030"
+                >
+                Dnxt compete 2030
+                </a>
+            </div>
           </div>
 
           {/* Detalles financieros */}
