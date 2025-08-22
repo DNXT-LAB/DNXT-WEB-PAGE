@@ -16,7 +16,7 @@ export default function Services() {
       <main>
         <section id="dnxt-token" className="py-24 bg-dark-dark">
           <div className="container-custom">
-            <div className="section-heading" ref={ref}>
+            <div className="section-heading mt-8" ref={ref}>
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -128,12 +128,12 @@ export default function Services() {
               Ready to cut, re-cut, or repair your diamond? <a href="/contact"><span className='text-gold font-bold'>Schedule Your Appointment</span></a> Now and experience premium craftsmanship in the heart of Europe.
               </p>
             </div> */}
-            <div className='flex items-center justify-center'>
+            <div className='flex items-center justify-center mt-[70px]'>
               <Link 
                 href="/contact" 
-                className="px-8 py-4 bg-gold hover:bg-transparent hover:bg-white/5 border border-gold/30 hover:border-gold text-black hover:text-white font-medium rounded-lg transition-all duration-300 text-lg w-full sm:w-auto text-center"
+                className="px-8 py-3 bg-gold hover:bg-transparent hover:bg-white/5 border border-gold/30 hover:border-gold text-black hover:text-white rounded-lg transition-all duration-300"
               >
-                Book Your Appointment Today
+                <button className='text-lg lg:text-xl font-bold'>Book Your Appointment Today</button>
               </Link>
             </div>
           </div>
