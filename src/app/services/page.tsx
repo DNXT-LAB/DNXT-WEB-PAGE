@@ -128,7 +128,7 @@ export default function Services() {
               Ready to cut, re-cut, or repair your diamond? <a href="/contact"><span className='text-gold font-bold'>Schedule Your Appointment</span></a> Now and experience premium craftsmanship in the heart of Europe.
               </p>
             </div> */}
-            <div className='flex items-center justify-center mt-[70px]'>
+            <div className='flex items-center justify-center mt-[100px] lg:mt-[70px]'>
               <Link 
                 href="/contact" 
                 className="px-8 py-3 bg-gold hover:bg-transparent hover:bg-white/5 border border-gold/30 hover:border-gold text-black hover:text-white rounded-lg transition-all duration-300"
