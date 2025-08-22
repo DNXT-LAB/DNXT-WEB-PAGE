@@ -39,12 +39,12 @@ export default function Compete2030() {
             
             <p><strong>Código da operação:</strong> COMPETE2030-FEDER-01452600</p>
 
-            <div className="flex items-center gap-2">
-                <p><strong>DNXT COMPETE 2030:</strong></p>
+            <div className="flex flex-col sm:flex-row lg:gap-2 text-left">
+                <span><strong>DNXT COMPETE 2030:</strong></span>
                 <a
                 href="/Ficha_de_OperacaoA4_COMPETE-2030.pdf"
                 download
-                className="text-blue-500 underline mb-9"
+                className="text-blue-500 underline hover:text-blue-400 transition-colors"
                 aria-label="Descargar PDF Dnxt compete 2030"
                 >
                 Ficha_de_OperacaoA4_COMPETE-2030
