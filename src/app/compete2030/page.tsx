@@ -10,9 +10,9 @@ export default function Compete2030() {
           {/* Imagen principal */}
           <div className="flex justify-center mb-12">
             <Image 
-              src="/images/2030-color.png" 
+              src="/images/compete.png" 
               alt="COMPETE 2030 - European Union Initiative" 
-              width={800} 
+              width={1000} 
               height={200}
               className="max-w-full h-auto"
             />
@@ -38,14 +38,15 @@ export default function Compete2030() {
             
             <p><strong>Código da operação:</strong> COMPETE2030-FEDER-01452600</p>
 
-            <div>
+            <div className="flex items-center gap-2">
+                <p><strong>DNXT COMPETE 2030:</strong></p>
                 <a
                 href="/Ficha_de_OperacaoA4_COMPETE-2030.pdf"
                 download
-                className="text-blue-500 underline"
+                className="text-blue-500 underline mb-9"
                 aria-label="Descargar PDF Dnxt compete 2030"
                 >
-                Dnxt compete 2030
+                Ficha_de_OperacaoA4_COMPETE-2030
                 </a>
             </div>
           </div>
