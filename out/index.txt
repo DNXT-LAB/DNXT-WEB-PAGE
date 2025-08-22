@@ -1,0 +1,50 @@
+1:HL["/_next/static/css/77afe42df6516275.css",{"as":"style"}]
+0:["cIq8LXT7E7kGgBosNOdqI",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/77afe42df6516275.css","precedence":"next"}]],"$L3"]]]]
+4:I{"id":7767,"chunks":["272:static/chunks/webpack-11df0924cc7d420c.js","971:static/chunks/fd9d1056-f0d7a6ac6a3812d6.js","596:static/chunks/596-a0d968726bbeae66.js"],"name":"default","async":false}
+5:I{"id":7920,"chunks":["272:static/chunks/webpack-11df0924cc7d420c.js","971:static/chunks/fd9d1056-f0d7a6ac6a3812d6.js","596:static/chunks/596-a0d968726bbeae66.js"],"name":"default","async":false}
+7:I{"id":1654,"chunks":["165:static/chunks/165-78e9707b188ed987.js","417:static/chunks/417-a8b4c2d3aae35579.js","818:static/chunks/818-986207e5ecef9155.js","931:static/chunks/app/page-5a7b0a3b78ea7c6c.js"],"name":"","async":false}
+8:I{"id":8777,"chunks":["165:static/chunks/165-78e9707b188ed987.js","417:static/chunks/417-a8b4c2d3aae35579.js","818:static/chunks/818-986207e5ecef9155.js","931:static/chunks/app/page-5a7b0a3b78ea7c6c.js"],"name":"","async":false}
+9:I{"id":664,"chunks":["165:static/chunks/165-78e9707b188ed987.js","417:static/chunks/417-a8b4c2d3aae35579.js","818:static/chunks/818-986207e5ecef9155.js","931:static/chunks/app/page-5a7b0a3b78ea7c6c.js"],"name":"","async":false}
+a:I{"id":4049,"chunks":["165:static/chunks/165-78e9707b188ed987.js","417:static/chunks/417-a8b4c2d3aae35579.js","818:static/chunks/818-986207e5ecef9155.js","931:static/chunks/app/page-5a7b0a3b78ea7c6c.js"],"name":"","async":false}
+b:I{"id":1659,"chunks":["165:static/chunks/165-78e9707b188ed987.js","417:static/chunks/417-a8b4c2d3aae35579.js","818:static/chunks/818-986207e5ecef9155.js","931:static/chunks/app/page-5a7b0a3b78ea7c6c.js"],"name":"","async":false}
+c:I{"id":685,"chunks":["165:static/chunks/165-78e9707b188ed987.js","417:static/chunks/417-a8b4c2d3aae35579.js","818:static/chunks/818-986207e5ecef9155.js","931:static/chunks/app/page-5a7b0a3b78ea7c6c.js"],"name":"","async":false}
+d:I{"id":8099,"chunks":["165:static/chunks/165-78e9707b188ed987.js","417:static/chunks/417-a8b4c2d3aae35579.js","818:static/chunks/818-986207e5ecef9155.js","931:static/chunks/app/page-5a7b0a3b78ea7c6c.js"],"name":"","async":false}
+e:I{"id":3015,"chunks":["185:static/chunks/app/layout-1045a0e92b2e1be0.js"],"name":"","async":false}
+3:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"DNXT | Tokenized Diamond Investment Platform"}],["$","meta","2",{"name":"description","content":"DNXT is a premier platform for tokenized diamond investment, bringing together blockchain technology and traditional diamond assets."}],["$","meta","3",{"name":"keywords","content":"diamond investment, tokenized assets, blockchain, NFT, diamond trading, CVC"}],["$","meta","4",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+f:T60f,
+            document.addEventListener('DOMContentLoaded', function() {
+              // Set up the Intersection Observer
+              const fadeElements = document.querySelectorAll('.fade-in, .stagger-fade-in');
+              
+              const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                  }
+                });
+              }, {
+                threshold: 0.1
+              });
+              
+              fadeElements.forEach(element => {
+                observer.observe(element);
+              });
+              
+              // Subtle parallax effect for elements with .parallax class
+              const parallaxElements = document.querySelectorAll('.parallax');
+              
+              window.addEventListener('scroll', function() {
+                parallaxElements.forEach(element => {
+                  const scrollPosition = window.pageYOffset;
+                  const elementPosition = element.getBoundingClientRect().top + scrollPosition;
+                  const distance = (scrollPosition - elementPosition) * 0.1;
+                  
+                  if (scrollPosition > elementPosition - window.innerHeight && 
+                      scrollPosition < elementPosition + element.offsetHeight) {
+                    element.style.transform = `translateY(${distance}px)`;
+                  }
+                });
+              });
+            });
+          2:[null,["$","html",null,{"lang":"en","className":"__variable_d65c78 __variable_840cdc","children":["$","body",null,{"className":"min-h-screen antialiased","children":[["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"childProp":{"current":["$L6",["$","main",null,{"children":[["$","$L7",null,{}],["$","$L8",null,{}],["$","$L9",null,{}],["$","$La",null,{}],["$","$Lb",null,{}],["$","$Lc",null,{}],["$","$Ld",null,{}]]}],null],"segment":"__PAGE__"},"styles":[]}],["$","$Le",null,{"id":"animation-observer","strategy":"afterInteractive","children":"$f"}]]}]}],null]
+6:null
